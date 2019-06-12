@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/denglu.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="miniheader">
+            <div class="miniheaderLeft"><a href="/"><img src="http://0.js.al.okbuycdn.com/resources/images/v6/login/login_new_logo.png" alt="okbuy"></a></div>
+        
+            <div class="miniheader_right">
+                <span class="right_span">
+                    <i></i>天天低价
+                </span>
+                <span class="right_span">
+                    <i></i>正品保障
+                </span>
+                <span class="right_span">
+                    <i></i>15天退换货
+                </span>
+                <span class="right_span">
+                    <i></i>评价晒单有礼
+                </span>
+            </div>
+        </div>
+        <!-- 背景图片 -->
+        <a class="login_new_bg" target="_blank" href="http://www.okbuy.com/sport">
+            <img border="0" width="2000" height="560" src="http://i.okaybuy.cn/static/6d7a3bd3888eaa52431fb23a9f2eb645.jpg">
+        </a>
+        <div class="loginwarpper">
+                <div class="login" style="background-image: none;">
+                  
+                    <div class="loginRightSecond">
+                        <!-- tab切换 -->
+                        <div class="login_new_tabhead">
+                            <span class="account active">账号登录</span>
+                            <span class="borderleft">扫码登录</span>
+                        </div>
+                        <!-- 账号登陆 -->
+                        <div class="login_new_tabbody">
+                            <div class="loginbody active">
+                                <p id="login_error_1" style="color:red;padding:5px 5px 5px 0;line-height:18px;"></p>
+                                                        
+                                <!-- <div class="logintab" style="margin-left:6px;width:300px;margin-bottom:5px"><span  id="checkUserleft">邮箱/已验证手机/用户名：</span></div> -->
+                                <div class="OB_clearB"></div>
+                                <div id="userLogin">
+                                    <!-- 登录 -->
+                                    <form id="loginform_name" name="loginform" action="/members/login/treat_login" method="post">
+                                    <input type="hidden" id="jumpurl" value="http://www.okbuy.com/">
+                                    <input autocomplete="off" type="hidden" id="csrf_param" value="6ec30e8cb29ce4a04bcf560736538a44">
+                                        <div class="login_txt">
+                                        <input type="text" title="" placeholder="已验证手机/邮箱/用户名" value="" class="valid" inptype="oktxt" id="username" name="username">
+                                        
+                                        </div>
+                                        <label class="error" id="usernameError"><i class="p_reg_note"></i><span></span></label>
+                                        <!-- <p>密码：</p> -->
+                                        <div class="login_txt">
+                                            <input type="password" placeholder="密码" name="password" id="password" title="" inptype="okpass" class="valid">
+                                        </div>
+                                        <label class="error" id="passwordError"><i class="p_reg_note"></i><span></span></label>
+                                        <p>
+                                            <input type="submit" class="login_btn_2" id="loginformbtn" name="" value="登录" style="float:left">
+                                            
+                                        </p>
+                                        <span class="loginPassBtn"></span>
+                                        <p class="loginRight_3"><a href="/member/forgetpwd">忘记密码？</a></p>
+                                                                    
+                                    </form>
+                                    <!-- 登录 -->
+                                </div>
+                                <div class="OB_clearB"></div>
+                              
+                                
+                            </div>
+                            <!-- 微信登陆 -->
+                            <div class="loginbody">
+                                <div class="scan_code">
+                                    <!-- 扫码 -->
+                                    <div class="havecode" style="display: block;">
+                                        <img class="code" src="/loginqrcode/qrcode?action=login&amp;id=e50fb91c42ea78c12014398c6b440f0a" alt=""><input type="hidden" id="str" value="e50fb91c42ea78c12014398c6b440f0a">
+                                        <img class="prompt" src="http://0.js.al.okbuycdn.com/resources/images/v6/login/login_new_prompt.jpg" alt="">
+                                    </div>
+                                    <!-- 扫码成功 -->
+                                    <div class="codesuccess" style="display: none">
+                                        <img class="success" src="http://0.js.al.okbuycdn.com/resources/images/v6/login/login_new_success.png" alt="">
+                                        <div class="codesuc">扫码成功</div>
+                                        <div class="suc_tishi">请勿刷新页面或离开，按手机提示操作！</div>
+                                    </div>
+                                    <!-- 二维码失效 -->
+                                    <div class="codefail" style="display: none;">
+                                        <img class="code" src="http://0.js.al.okbuycdn.com/resources/images/v6/login/login_new_ewm.png" alt="">
+                                        <div class="failure">
+                                            <div class="fail">二维码已失效</div>
+                                            <div class="coderefresh">请刷新</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="scan_word" style="display:none">请使用好乐买APP扫码登录</div>
+                                <div class="scan_down" style="display:none">
+                                    <div class="down">
+                                        <i class="downimg"></i>
+                                        下载好乐买APP
+                                    </div>
+                                    <div class="down_code">
+                                        <i class="down_after"></i>
+                                        <i class="down_before"></i>
+                                        <img src="http://0.js.al.okbuycdn.com/resources/images/v6/login/login_new_ewm.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login_new_party">
+                            <div class="three_party">
+                                <a title="QQ登录" href="/third_party/login/newqq/API/index.php"><i class="login_icon_qq"></i></a>
+                                <a title="微信登录" href="/third_party/login/wechat/login.php?jumpurl="><i class="login_icon_wx"></i></a>
+                                <a title="支付宝登录" href="/third_party/login/alipay_login/auth_authorize.php"><i class="login_icon_pay"></i></a>
+                                <a title="微博登录" href="/third_party/login/sinaweibo?jumpurl="><i class="login_icon_wb"></i></a>
+                                <a title="开心网登录" href="http://www.kaixin001.com/login/connect.php?appkey=93227016320896f5b761ee46fd6d5f2f&amp;re=/third_party/login/kaixin/login.php&amp;t=4" class="noborder"><i class="login_icon_kx"></i></a>
+                            </div>
+                            <a class="goregister" href="/members/register">
+                                <i></i>注册有惊喜
+                            </a>
+                        </div>
+                    </div>
+                    <div class="OB_clearB"></div>
+            
+                </div>
+            </div>
+</body>
+</html>

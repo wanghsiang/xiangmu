@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gouwuce.css">
+</head>
+
+<body>
+    <div class="w1200 cartcen">
+        <input type="hidden" id="isCart" value="1">
+        <div class="carttit">
+            <h1>我的购物车</h1><span style="color:#d70057"></span>
+        </div>
+      
+        <div class="OB_clearB"></div>
+        <div class="cartlist">
+            <!-- 头部 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th width="110"><span class="checkboxall allcur"></span><span class="all">全选</span></th>
+                        <th width="470">商品名称</th>
+                        <th width="110">单价</th>
+                        <th width="240">数量</th>
+                        <th width="110">小计</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="cartlistin">
+                <!-- 清空按钮 -->
+
+                <!-- 单品级活动 -->
+                <table>
+                    <tbody>
+                        <tr class="promotion">
+                            <td class="promotion_1" width="110"></td>
+                            <td colspan="5" class="promotion_2">
+                                <span>特价</span> 【特价优惠】男女鞋 </td>
+                        </tr>
+                        <tr>
+                            <td class="" width="110"><span class="checkbox cur"></span></td>
+                            <td width="470">
+                                <a href="/product/detail/17645188.html?ref=c_1_c" target="_blank"
+                                    title="木林森男式休闲沙滩鞋舒适透气拖鞋男凉拖鞋">
+                                    <img src="http://0.image.al.okbuycdn.com/nbn/w150_150_detect/static/a445f7137689109f65633a43363c0cff.jpg"
+                                        class="img" title="木林森男式休闲沙滩鞋舒适透气拖鞋男凉拖鞋">
+                                    <strong>木林森男式休闲沙滩鞋舒适透气拖鞋男凉拖鞋</strong><br>
+                                    <small>尺码：<i>38</i></small>
+                                </a>
+
+                            </td>
+                            <td width="110">
+                                ¥79 <div class="OB_clearB"></div>
+                            </td>
+                            <td width="240">
+
+                                <!-- 数量控制器 -->
+                                <ul>
+                                    <li>
+                                        <span class="reduce noreduce">-</span>
+                                    </li>
+                                    <li>
+                                        <label><input type="text" value="1" autocomplete="off" maxlength="1"
+                                                data-min="1" data-max="9" data-comid="17645188"
+                                                data-rowid="144095a5c69a2d1a87bfd3a7191886f1" data-ori="1"
+                                                readonly="readonly"></label>
+                                    </li>
+                                    <li>
+                                        <span class="add">+</span>
+                                    </li>
+                                </ul>
+                                <div class="OB_clearB"></div>
+                                <!-- //数量控制器 -->
+                            </td>
+                            <td width="110">
+                                <span class="pr">¥<pr>79</pr></span><br>
+                            </td>
+                            <td>
+                                <span class="wish"><i>收藏</i></span>
+                                <span class="delete"><i>删除</i></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- //单品级活动 -->
+            </div>
+            <!-- 订单级活动-->
+        </div>
+    </div>
+
+    <!-- 结算 -->
+
+    <div class="cartsumout cartsumoutbtm">
+	
+        <div class="cartsum">
+            <!-- 免邮提醒 -->
+            <div class="free_reminder">
+                <b>邮</b>
+                            <span class="free">满259元包邮，再购<i class="money">180</i><i>元</i>包邮</span>
+                <a href="/info/free_shipping/79" class="single">去凑单<i class="arrow"></i></a>
+                <i class="dire_bg"></i>
+                <i class="dire"></i>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th width="110"><span class="checkboxall allcur"></span><span class="all">全选</span></th>
+                        <th width="100" id="delall">删除所选商品</th>
+                        <th width="140"></th>
+                        <th width="100">&nbsp;</th>
+                        <th width="100">商品数量：<i id="total_num">1</i></th>
+                        <th width="140">商品金额：<i>¥<pr id="total_last_all">79</pr></i></th>
+                        <th width="130">活动优惠：<i>¥<pr id="total_last_reduce">0</pr></i></th>
+                        <th width="220">合计(不含运费)：<i class="pr">¥<pr id="total_price">79</pr></i></th>
+                        <th width="160"><span id="submit" style="background: rgb(215, 0, 87);">去结算</span></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
