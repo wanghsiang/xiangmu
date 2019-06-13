@@ -50,8 +50,9 @@
 #sf {
     width: 50px;
     height: 50px;
-    background: orange;
-    opacity: 0.3;
+    background:#fff;
+    border:1px solid #ccc;
+    opacity: 0.5;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -299,6 +300,22 @@ a{
     margin-bottom: 10px;
     position: relative;
 }
+.prodColorImg span img{
+    display:block;
+    width:100%;
+}
+.prodColorImg a {
+    display: block;
+    width: 59px;
+    height: 59px;
+    float: left;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.prodColorImg a img{
+    width:100%;
+}
 .selectCurArea a.selectCurrentLink i, .prodColorImg span i {
     display: block;
     position: absolute;
@@ -309,6 +326,7 @@ a{
     height: 16px;
     background: url(http://0.js.al.okbuycdn.com/resources/images/v6/product/detail/sizeselected-thumb.png) no-repeat;
 }
+
 .prodConSize .prodH {
     line-height: 18px;
     width: 100%;
@@ -341,13 +359,14 @@ ul.selectSize li {
   }
   .selectCurArea span.nostock {
     display: block;
-    border: 1px dashed #D6D6D8;
+    border: 1px solid #D6D6D8;
     position: relative;
     background: white;
-    cursor: not-allowed;
+    /* cursor: not-allowed; */
   }
   .selectCurArea .nostock .text {
-    color: #D6D6D6;
+    color: #333;
+    font-size:12px;
   }
   .selectCurArea .text {
     display: block;

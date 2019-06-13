@@ -279,6 +279,7 @@
                     _this.nnav.css('position', 'static')
                 }
             })
+            //回到顶部
             $(window).on('scroll', function () {
                 var $scroll = $(window).scrollTop()
                 if ($scroll >= 50) {
@@ -377,18 +378,18 @@
         }
         init() {
             var _this=this
-            this.oul.hover(function (ev) {
-                var $evle = $(ev.target)
-                if ($evle.is('img')) {
-                    $evle.css('border', '1px solid red')
-                }
-            }, function (ev) {
-                var $evle = $(ev.target)
-                $evle.css('border', '1px solid #fff')
+            this.oul.on('mouseover','img',function(){
+                $(this).css('border', '1px solid red')
+            })
+
+            this.oul.on('mouseout','img',function(){
+                $(this).css('border', '1px solid #fff')
             })
 
             this.oli.hover(function(){
-                $(this).css('border', '1px solid red')
+                $(this).css({
+                    border:'1px solid red'
+                })
             },function(){
                 $(this).css('border', '1px solid #fff')
             })
@@ -396,33 +397,75 @@
     }
     new image().init()
     // 图片列表1
+    //渲染
     class goodlist {
         constructor() {
-            this.list2 = $('#indexhtml2')
+            this.list2 = $('#indexhtml2');
+            // this.searchBtn=$('#searchBtn');
         }
         init() {
             var _this = this
+
+            this.list2.on('click','li',function(){
+                     var $sid=$(this).attr('sid')
+                    $.cookie('sid',$sid)
+                window.location.href="http://10.31.164.58/projectname/src/details.html";
+            })
+
+
             $.ajax({
-                url: 'http://localhost/projectname/php/postdata.php',
+                url: 'http://10.31.164.58/projectname/php/postdata.php',
                 dataType: 'json'
-            }).done(function (data) {
-                // console.log(data)
-                var $strhtml = ''
-                $.each(data, function (index, value) {
+            }).done(function (dat) {
+                var $strhtml = '';
+                $.each(dat, function (index, value) {
                     $strhtml += `
-                        <li>
-                            <a href="">
-                                <img src="${value.url}">
+                        <li sid="${value.sid}">
+                            <a href="javascript:;">
+                                <img class="lazy" data-original="${value.url}" width="593" height="208">
                                 <span class="tit1">${value.title}</span>
                                 <span class="tit2">${value.title2}</span>
                                 <span class="tit3">${value.price}</span>
                             </a>
-
                         </li>
                     `
                 })
+
                 _this.list2.html($strhtml);
+
+                $(function() {
+                    $("img.lazy").lazyload({
+                        effect: "fadeIn"
+                    });
+                });
+
             })
+
+            var arr = [
+                "运动鞋",
+                "跑步鞋",
+                "复古鞋",
+               " 复古鞋",
+                "休闲鞋",
+                "帆布鞋",
+                "板鞋",
+                "滑板鞋",
+                "篮球鞋",
+                "凉鞋",
+                "凉拖",
+                "健步鞋",
+                "足球鞋",
+                "羽毛球鞋",
+               "网球鞋",
+                "乒乓球鞋",
+                "正装鞋",
+
+        ]
+        
+        $('.searching').autocomplete({
+            source:arr
+        });
+
         }
     }
     new goodlist().init()
